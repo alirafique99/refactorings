@@ -10,7 +10,7 @@ public class Vehicle{
             if (assignedVehicles.isValidList()) filters.VehicleIds = assignedVehicles;
         }
     
-        
+         var vehicles = filterByMachineMakes();
     
         return vehicles;
     }
