@@ -10,9 +10,13 @@ public class Vehicle{
             if (assignedVehicles.isValidList()) filters.VehicleIds = assignedVehicles;
         }
     
+        
+    
+        return vehicles;
+    }
+    private  Task<List<VehicleBasicInfoDto>> filterByMachineMakes (VehicleFilters filters){
         var machineMakes = await GetMachineMakes(filters);
         var vehicles = await GetVehiclesWithSpec(filters, machineMakes);
-    
         return vehicles;
     }
     
